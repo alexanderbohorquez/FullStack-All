@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENU HORIZONTAL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <nav>
+        <!--* MOBILE  -->
+        <div class="mobile">
+            <div class="header">
+                <div class="logo">Logo</div>
+                <div class="more">
+                    <button id="bMore">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Enlaces para dispositivos móviles -->
+            <div id="links" class="links collapsed">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+        <!--* DESKTOP  -->
+        <div class="desktop">
+            <div class="logo">Logo</div>
+            <!-- Enlaces primarios para dispositivos de escritorio -->
+            <div class="primary">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <!-- Enlaces secundarios para dispositivos de escritorio -->
+            <div class="secondary full">
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+            <!-- Enlaces secundarios en versión mini para dispositivos de escritorio -->
+            <div class="secondary mini">
+                <a href="#" class="more">More</a>
+                <div class="submenu">
+                    <a href="#">Search</a>
+                    <a href="#">Sign up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--* Script para controlar el comportamiento del botón "más" en dispositivos móviles -->
+    <script>
+        // Selecciona el botón "más"
+        const bMore = document.querySelector('#bMore');
+        // Añade un evento de clic al botón "más"
+        bMore.addEventListener('click', e => {
+            // Selecciona los enlaces
+            const links = document.querySelector('.links');
+            // Alterna la clase "collapsed" en los enlaces para mostrar u ocultar los enlaces
+            links.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>

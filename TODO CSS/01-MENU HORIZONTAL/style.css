@@ -1,0 +1,126 @@
+/** Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del texto */
+    margin: 0; /* Margen exterior */
+    padding: 0; /* Relleno interno */
+}
+
+/** Estilos para la barra de navegación */
+nav {
+    background-color: black; /* Define el color de fondo de la barra de navegación como negro */
+    color: white; /* Define el color del texto dentro de la barra de navegación como blanco */
+    width: 100%; /* Establece el ancho de la barra de navegación como el 100% del ancho de su contenedor */
+}
+
+/** Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 500px) {
+    /* Oculta la barra de navegación en dispositivos con un ancho máximo de 500px */
+    nav .desktop {
+        display: none;
+    }   
+    /* Muestra la versión móvil de la barra de navegación en dispositivos con un ancho máximo de 500px */
+    nav .mobile {
+        display: block;
+    }
+}
+
+/** Estilos para dispositivos móviles */
+nav .mobile {
+    display: none; /* Oculta la barra de navegación en dispositivos móviles */
+}
+
+nav .mobile .header {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    padding-left: 10px; /* Agrega relleno a la izquierda */
+}
+
+nav .mobile .header .more button {
+    border: none; /* Elimina el borde del botón */
+    background-color: black; /* Define el color de fondo del botón como negro */
+    color: white; /* Define el color del texto del botón como blanco */
+    padding: 15px; /* Agrega relleno al botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+/** Estilos para dispositivos de escritorio */
+nav .desktop {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    padding: 0 20px; /* Agrega relleno a los lados */
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex; /* Utiliza flexbox para los elementos secundarios */
+}
+
+nav .desktop .secondary.mini {
+    display: none; /* Oculta los elementos secundarios en modo mini */
+}
+
+/** Estilos específicos para dispositivos con un ancho máximo de 853px */
+@media screen and (max-width: 853px) {
+    /* Establece el ancho mínimo del logotipo en 100px */
+    nav .logo {
+        min-width: 100px;
+    }
+    /* Oculta los elementos secundarios con la clase .full */
+    nav .secondary.full {
+        display: none;
+    }
+    /* Muestra los elementos secundarios con la clase .mini */
+    nav .secondary.mini {
+        display: block !important;
+    }
+    /* Establece estilos para el submenú de los elementos secundarios en modo mini */
+    nav .secondary.mini .submenu {
+        background-color: black; /* Define el color de fondo del submenú como negro */
+        position: absolute; /* Establece la posición absoluta para el submenú */
+        display: none; /* Oculta el submenú por defecto */
+        width: 200px; /* Establece el ancho del submenú */
+        right: 0; /* Alinea el submenú a la derecha */
+    }
+    /* Muestra el submenú cuando se pasa el cursor sobre los elementos secundarios en modo mini */
+    nav .secondary.mini:hover .submenu {
+        display: block;
+    }
+}
+
+/** Estilos específicos para dispositivos con un ancho máximo de 500px */
+@media screen and (max-width: 500px) {
+    /* Oculta la barra de navegación en dispositivos con un ancho máximo de 500px */
+    nav .desktop {
+        display: none;
+    }   
+    /* Muestra la versión móvil de la barra de navegación en dispositivos con un ancho máximo de 500px */
+    nav .mobile {
+        display: block;
+    }
+}
+
+/** Estilos para elementos con clase "logo" dentro de la barra de navegación */
+nav .logo {
+    min-width: 250px; /* Establece el ancho mínimo del elemento con clase "logo" en 250px */
+}
+
+/** Estilos para los enlaces dentro de la barra de navegación */
+nav a {
+    color: white; /* Define el color del texto de los enlaces como blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    display: block; /* Hace que los enlaces se muestren como bloques, ocupando toda la anchura disponible */
+    padding: 20px 25px; /* Añade relleno de 20px arriba y abajo, y 25px a los lados a los enlaces */
+}
+
+/** Estilos para los enlaces dentro de la barra de navegación al pasar el cursor sobre ellos */
+nav a:hover {
+    color: black; /* Cambia el color del texto a negro */
+    background-color: #00c3ff; /* Cambia el color de fondo a un tono de azul claro */
+}
+
+/** Estilos para el elemento con clase "collapsed" */
+.collapsed {
+    display: none; /* Oculta los elementos con la clase "collapsed" */
+}
