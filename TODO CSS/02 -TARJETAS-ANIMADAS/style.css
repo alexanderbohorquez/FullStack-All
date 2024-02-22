@@ -1,65 +1,78 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+/**Establece estilos generales para el cuerpo del documento */
+body {
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno interior */
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente del texto */
 }
 
-.cards{
-    display: flex;
-    width: 100%;
-    padding: 50px;
+/**Establece estilos para el contenedor de las tarjetas */
+.cards {
+    display: flex; /* Utiliza flexbox para el diseño */
+    width: 100%; /* Establece el ancho al 100% */
+    padding: 50px; /* Añade relleno de 50px */
 }
 
-.cards .card{
-    background-color: rgba(0, 144, 255);
-    color: white;
-    width: 300px;
-    height: 350px;
-    border-radius: 10px;
-    padding: 30px;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+/**Establece estilos para cada tarjeta individual */
+.cards .card {
+    background-color: rgba(0, 144, 255); /* Define el color de fondo */
+    color: white; /* Define el color del texto */
+    width: 300px; /* Establece el ancho */
+    height: 350px; /* Establece la altura */
+    border-radius: 10px; /* Define el radio de borde */
+    padding: 30px; /* Añade relleno */
+    box-sizing: border-box; /* Asegura que el relleno y el borde se incluyan en las dimensiones */
+    position: relative; /* Define la posición relativa */
+    display: flex; /* Utiliza flexbox para el diseño */
+    flex-direction: column; /* Establece la dirección del flexbox como columna */
 
+    /** Transición suave de los estilos */
     transition: all 0.3s ease;
 
+    /** Sombra */
     box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
     -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cards .card a{
-    color: yellow;
-    text-decoration: none;
-    font-weight: bold;
+/**Establece estilos para los enlaces dentro de las tarjetas*/
+.cards .card a {
+    color: yellow; /* Define el color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Define el peso de la fuente como negrita */
 }
 
-.cards .card a:hover{
-    color: lightyellow;
+/**Establece estilos al pasar el cursor sobre los enlaces dentro de las tarjetas*/
+.cards .card a:hover {
+    color: lightyellow; /* Cambia el color del texto al pasar el cursor */
 }
 
-.cards .card .header{
-    flex: 1;
+/**Establece estilos para la sección del encabezado de la tarjeta */
+.cards .card .header {
+    flex: 1; /* Ocupa todo el espacio disponible */
 }
 
-.cards .card:hover{
-    margin-right: 80px;
-    transform: rotate(3deg) translateY(-15px);
+/**Establece estilos para la sección de la fecha dentro del encabezado de la tarjeta */
+.cards .card .header .date {
+    padding: 10px 0; /* Añade relleno */
 }
 
-.cards .card .header .date{
-    padding: 10px 0;
+/*** Establece estilos para el título dentro del encabezado de la tarjeta*/
+.cards .card .header .title {
+    font-size: 28px; /* Define el tamaño de la fuente */
 }
 
-.cards .card .header .tittle{
-    font-size: 28px;
-}
-
+/*** Establece estilos para elementos con clases que contienen "element"*/
 .cards .card[class*="element"] {
-    margin-left: -100px;
+    margin-left: -100px; /* Establece un margen negativo a la izquierda */
 }
 
+/*** Establece estilos al pasar el cursor sobre elementos con clase "element-1" o "element-2"*/
 .element-1:hover,
 .element-2:hover {
-    margin-left: -130px;
+    margin-left: -130px; /* Ajusta el margen negativo a la izquierda */
+}
+
+/**Establece estilos al pasar el cursor sobre la tarjeta */
+.cards .card:hover {
+    margin-right: 80px; /* Ajusta el margen derecho */
+    transform: rotate(3deg) translateY(-15px); /* Realiza una rotación y traslación */
 }

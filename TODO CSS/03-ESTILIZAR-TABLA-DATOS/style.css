@@ -1,0 +1,44 @@
+/** Establece estilos generales para el cuerpo del documento */
+body {
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno interior */
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente del texto */
+}
+
+/** Establece estilos para la tabla */
+table {
+    border-spacing: 0; /* Espaciado entre bordes de celda */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    width: 800px; /* Establece el ancho de la tabla */
+    margin: 100px auto; /* Centra la tabla horizontalmente con un margen arriba y abajo */
+}
+
+/** Establece estilos para las celdas de la tabla */
+td, th {
+    border: solid 1px #ccc; /* Borde sólido de 1px de color gris */
+    padding: 5px; /* Añade relleno interno de 5px */
+}
+
+/** Establece estilos para las filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #ddd; /* Color de fondo para filas pares */
+}
+
+/** Establece estilos para el contenido de la segunda columna */
+td:nth-child(2) {
+    text-align: center; /* Centra el texto de la segunda columna */
+}
+
+/** Establece estilos para las filas de la tabla al pasar el cursor */
+tbody tr:hover {
+    background-color: rgb(160, 222, 225); /* Cambia el color de fondo al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor a una forma de puntero */
+}
+
+/** Establece estilos para la fila de encabezado */
+thead {
+    background-color: black; /* Color de fondo negro */
+    color: white; /* Color del texto blanco */
+    position: sticky; /* Fija la fila de encabezado */
+    top: 0; /* Fija la fila de encabezado en la parte superior */
+}
